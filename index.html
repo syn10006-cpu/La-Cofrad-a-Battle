@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#111315">
-  <title>La Cofradía Fight Night</title>
+  <title>La Cofradía Fight Night v0.2.1</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,10 +12,11 @@
     <header class="top">
       <div>
         <h1>LA COFRADÍA FIGHT NIGHT</h1>
-        <p>Prototipo 0.1 · combate 2D lateral</p>
+        <p>v0.2.1 · selección de personaje · sprites corregidos · victoria</p>
       </div>
       <div class="actions">
         <button id="cpuToggle" type="button">CPU: ON</button>
+        <button id="menuButton" type="button">Selección</button>
         <button id="resetButton" type="button">Reiniciar</button>
       </div>
     </header>
@@ -33,15 +34,16 @@
       <div><kbd>J</kbd> golpe débil</div>
       <div><kbd>K</kbd> golpe fuerte</div>
       <div><kbd>L</kbd> bloquear</div>
-      <div><kbd>R</kbd> reiniciar</div>
+      <div><kbd>Enter</kbd> confirmar / continuar</div>
       <div><kbd>H</kbd> hitboxes</div>
+      <div><kbd>R</kbd> reiniciar</div>
     </section>
 
     <p id="status" class="status" aria-live="polite">
-      Haz clic en el juego y usa el teclado. El Cuy está controlado por CPU.
+      Cargando recursos…
     </p>
   </main>
 
-  <script src="src/game.js"></script>
+  <script type="module" src="src/game.js"></script>
 </body>
 </html>
