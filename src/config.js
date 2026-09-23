@@ -1,98 +1,74 @@
-export const CANVAS = {
+export const GAME = {
   width: 640,
   height: 360,
-  floorY: 294,
-  leftLimit: 66,
-  rightLimit: 574,
+  floorY: 298,
+  leftLimit: 67,
+  rightLimit: 573,
+  roundSeconds: 60,
+  roundsToWin: 2,
+  gravity: 760,
+  frameCanvas: { width: 360, height: 300, baselineY: 286 },
 };
 
-export const CONTROLS_TEXT =
-  "A/D mover · Shift o doble toque correr · W salto · S agachar · J débil · K fuerte · L bloquear";
-
 export const CHARACTERS = {
-  human: {
-    id: "human",
-    displayName: "PELADO",
-    subtitle: "Balanceado · alcance medio",
-    scale: 1.56,
-    previewScale: 2.4,
-    selectAccent: "#c99a45",
+  biker: {
+    id: "biker",
+    name: "THE BIKER",
+    shortName: "BIKER",
+    subtitle: "Vodka · alcance",
+    drawScale: 0.56,
+    body: { width: 36, standHeight: 78, crouchHeight: 47 },
+    walkSpeed: 95,
+    runSpeed: 188,
+    jumpVelocity: 315,
   },
   cuy: {
     id: "cuy",
-    displayName: "CUY",
-    subtitle: "Cuerpo ancho · golpes compactos",
-    scale: 1.58,
-    previewScale: 2.0,
-    selectAccent: "#ca8347",
+    name: "THE CUY MAN",
+    shortName: "CUY",
+    subtitle: "Fuerza · cuerpo a cuerpo",
+    drawScale: 0.56,
+    body: { width: 43, standHeight: 76, crouchHeight: 48 },
+    walkSpeed: 89,
+    runSpeed: 176,
+    jumpVelocity: 300,
   }
 };
 
-export const ASSET_LIST = {
-  human: {
-    idle: ["idle_0","idle_1","idle_2","idle_3","idle_4"],
-    walk: ["walk_0","walk_1","walk_2"],
-    run: ["run_0","run_1"],
-    jump: ["jump_0","jump_1"],
-    crouch: ["crouch_0","crouch_1"],
-    weak: ["weak_0","weak_1"],
-    strong: ["strong_0","strong_1"],
-    crouchAttack: ["crouch_attack_0","crouch_attack_1"],
-    airAttack: ["air_attack_0","air_attack_1"],
-    hit: ["hit_0","hit_1"],
-    death: ["death_0","death_1","death_2"],
-    victory: ["victory_0","victory_1"],
-    select: ["select_0"],
-  },
-  cuy: {
-    idle: ["idle_0","idle_1","idle_2"],
-    walk: ["walk_0","walk_1","walk_2"],
-    run: ["run_0","run_1"],
-    jump: ["jump_0","jump_1"],
-    crouch: ["crouch_0","crouch_1"],
-    weak: ["weak_0","weak_1"],
-    strong: ["strong_0","strong_1"],
-    crouchAttack: ["crouch_attack_0","crouch_attack_1"],
-    airAttack: ["air_attack_0","air_attack_1"],
-    hit: ["hit_0","hit_1"],
-    death: ["death_0","death_1","death_2"],
-    victory: ["victory_0","victory_1"],
-    select: ["select_0"],
-  }
-};
-
-export const ANIM = {
-  idle:         { fps: 5, loop: true },
-  walk:         { fps: 8, loop: true },
-  run:          { fps: 12, loop: true },
-  jump:         { fps: 6, loop: true },
-  crouch:       { fps: 4, loop: true },
-  block:        { fps: 4, loop: true },
-  weak:         { fps: 9, loop: false },
-  strong:       { fps: 6, loop: false },
-  crouchAttack: { fps: 8, loop: false },
-  airAttack:    { fps: 9, loop: false },
-  hit:          { fps: 9, loop: false },
-  death:        { fps: 4, loop: false },
-  victory:      { fps: 4, loop: true },
-  select:       { fps: 1, loop: true },
+export const ANIMATIONS = {
+  idle:         { count:3, fps:5, loop:true },
+  walk:         { count:4, fps:8, loop:true },
+  run:          { count:2, fps:11, loop:true },
+  jump:         { count:2, fps:6, loop:true },
+  crouch:       { count:2, fps:4, loop:true },
+  weak:         { count:2, fps:10, loop:false },
+  strong:       { count:2, fps:7, loop:false },
+  crouch_attack:{ count:2, fps:9, loop:false },
+  air_attack:   { count:2, fps:9, loop:false },
+  block:        { count:1, fps:1, loop:true },
+  hit:          { count:1, fps:1, loop:false },
+  death:        { count:2, fps:4, loop:false },
+  victory:      { count:2, fps:3, loop:true },
 };
 
 export const ATTACKS = {
   weak: {
-    duration: 0.30, activeStart: 0.10, activeEnd: 0.19,
-    damage: 8, reach: 43, height: 33, yOffset: 48, push: 13
+    duration:.28, activeStart:.09, activeEnd:.18,
+    damage:8, reach:45, height:32, yOffset:49, push:12, hitStun:.18
   },
   strong: {
-    duration: 0.52, activeStart: 0.19, activeEnd: 0.34,
-    damage: 15, reach: 63, height: 38, yOffset: 46, push: 24
+    duration:.50, activeStart:.18, activeEnd:.33,
+    damage:15, reach:62, height:39, yOffset:47, push:23, hitStun:.31
   },
-  crouchAttack: {
-    duration: 0.38, activeStart: 0.13, activeEnd: 0.25,
-    damage: 7, reach: 45, height: 25, yOffset: 22, push: 12
+  crouch_attack: {
+    duration:.36, activeStart:.12, activeEnd:.24,
+    damage:7, reach:49, height:24, yOffset:21, push:12, hitStun:.20
   },
-  airAttack: {
-    duration: 0.40, activeStart: 0.08, activeEnd: 0.28,
-    damage: 10, reach: 45, height: 34, yOffset: 41, push: 17
+  air_attack: {
+    duration:.40, activeStart:.08, activeEnd:.28,
+    damage:10, reach:49, height:36, yOffset:43, push:16, hitStun:.24
   }
 };
+
+export const CONTROLS_TEXT =
+  "A/D mover · Shift correr · W saltar · S agachar · J débil · K fuerte · L bloquear";

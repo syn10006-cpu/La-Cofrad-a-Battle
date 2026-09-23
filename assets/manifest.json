@@ -1,0 +1,124 @@
+{
+  "version": "0.3",
+  "frame_canvas": {
+    "width": 360,
+    "height": 300,
+    "baseline_y": 286
+  },
+  "characters": {
+    "biker": {
+      "animations": {
+        "idle": [
+          "assets/characters/biker/idle/idle_01.png",
+          "assets/characters/biker/idle/idle_02.png",
+          "assets/characters/biker/idle/idle_03.png"
+        ],
+        "walk": [
+          "assets/characters/biker/walk/walk_01.png",
+          "assets/characters/biker/walk/walk_02.png",
+          "assets/characters/biker/walk/walk_03.png",
+          "assets/characters/biker/walk/walk_04.png"
+        ],
+        "run": [
+          "assets/characters/biker/run/run_01.png",
+          "assets/characters/biker/run/run_02.png"
+        ],
+        "jump": [
+          "assets/characters/biker/jump/jump_01.png",
+          "assets/characters/biker/jump/jump_02.png"
+        ],
+        "crouch": [
+          "assets/characters/biker/crouch/crouch_01.png",
+          "assets/characters/biker/crouch/crouch_02.png"
+        ],
+        "weak": [
+          "assets/characters/biker/weak/weak_01.png",
+          "assets/characters/biker/weak/weak_02.png"
+        ],
+        "strong": [
+          "assets/characters/biker/strong/strong_01.png",
+          "assets/characters/biker/strong/strong_02.png"
+        ],
+        "crouch_attack": [
+          "assets/characters/biker/crouch_attack/crouch_attack_01.png",
+          "assets/characters/biker/crouch_attack/crouch_attack_02.png"
+        ],
+        "air_attack": [
+          "assets/characters/biker/air_attack/air_attack_01.png",
+          "assets/characters/biker/air_attack/air_attack_02.png"
+        ],
+        "block": [
+          "assets/characters/biker/block/block_01.png"
+        ],
+        "hit": [
+          "assets/characters/biker/hit/hit_01.png"
+        ],
+        "death": [
+          "assets/characters/biker/death/death_01.png",
+          "assets/characters/biker/death/death_02.png"
+        ],
+        "victory": [
+          "assets/characters/biker/victory/victory_01.png",
+          "assets/characters/biker/victory/victory_02.png"
+        ]
+      }
+    },
+    "cuy": {
+      "animations": {
+        "idle": [
+          "assets/characters/cuy/idle/idle_01.png",
+          "assets/characters/cuy/idle/idle_02.png",
+          "assets/characters/cuy/idle/idle_03.png"
+        ],
+        "walk": [
+          "assets/characters/cuy/walk/walk_01.png",
+          "assets/characters/cuy/walk/walk_02.png",
+          "assets/characters/cuy/walk/walk_03.png",
+          "assets/characters/cuy/walk/walk_04.png"
+        ],
+        "run": [
+          "assets/characters/cuy/run/run_01.png",
+          "assets/characters/cuy/run/run_02.png"
+        ],
+        "jump": [
+          "assets/characters/cuy/jump/jump_01.png",
+          "assets/characters/cuy/jump/jump_02.png"
+        ],
+        "crouch": [
+          "assets/characters/cuy/crouch/crouch_01.png",
+          "assets/characters/cuy/crouch/crouch_02.png"
+        ],
+        "weak": [
+          "assets/characters/cuy/weak/weak_01.png",
+          "assets/characters/cuy/weak/weak_02.png"
+        ],
+        "strong": [
+          "assets/characters/cuy/strong/strong_01.png",
+          "assets/characters/cuy/strong/strong_02.png"
+        ],
+        "crouch_attack": [
+          "assets/characters/cuy/crouch_attack/crouch_attack_01.png",
+          "assets/characters/cuy/crouch_attack/crouch_attack_02.png"
+        ],
+        "air_attack": [
+          "assets/characters/cuy/air_attack/air_attack_01.png",
+          "assets/characters/cuy/air_attack/air_attack_02.png"
+        ],
+        "block": [
+          "assets/characters/cuy/block/block_01.png"
+        ],
+        "hit": [
+          "assets/characters/cuy/hit/hit_01.png"
+        ],
+        "death": [
+          "assets/characters/cuy/death/death_01.png",
+          "assets/characters/cuy/death/death_02.png"
+        ],
+        "victory": [
+          "assets/characters/cuy/victory/victory_01.png",
+          "assets/characters/cuy/victory/victory_02.png"
+        ]
+      }
+    }
+  }
+}

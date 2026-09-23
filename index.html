@@ -4,44 +4,41 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#111315">
-  <title>La Cofradía Fight Night v0.2.1</title>
+  <title>La Cofradía Battle v0.3</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <main class="shell">
-    <header class="top">
+    <header class="topbar">
       <div>
-        <h1>LA COFRADÍA FIGHT NIGHT</h1>
-        <p>v0.2.1 · selección de personaje · sprites corregidos · victoria</p>
+        <h1>LA COFRADÍA BATTLE</h1>
+        <p>v0.3 · prototipo web</p>
       </div>
-      <div class="actions">
-        <button id="cpuToggle" type="button">CPU: ON</button>
-        <button id="menuButton" type="button">Selección</button>
-        <button id="resetButton" type="button">Reiniciar</button>
+      <div class="buttons">
+        <button id="selectBtn" type="button">Personajes</button>
+        <button id="cpuBtn" type="button">CPU: ON</button>
+        <button id="restartBtn" type="button">Reiniciar</button>
       </div>
     </header>
 
-    <section class="game-wrap" aria-label="Juego">
+    <section class="game-shell">
       <canvas id="game" width="640" height="360" tabindex="0"
-              aria-label="La Cofradía Fight Night, juego de pelea 2D"></canvas>
+        aria-label="La Cofradía Battle, juego de pelea 2D"></canvas>
     </section>
 
-    <section class="controls">
-      <div><kbd>A</kbd><kbd>D</kbd> caminar</div>
-      <div><kbd>Shift</kbd> + dirección / doble toque: correr</div>
-      <div><kbd>W</kbd> salto</div>
-      <div><kbd>S</kbd> agachar</div>
-      <div><kbd>J</kbd> golpe débil</div>
-      <div><kbd>K</kbd> golpe fuerte</div>
-      <div><kbd>L</kbd> bloquear</div>
-      <div><kbd>Enter</kbd> confirmar / continuar</div>
-      <div><kbd>H</kbd> hitboxes</div>
-      <div><kbd>R</kbd> reiniciar</div>
+    <section class="help">
+      <span><kbd>A</kbd><kbd>D</kbd> mover</span>
+      <span><kbd>Shift</kbd> correr</span>
+      <span><kbd>W</kbd> saltar</span>
+      <span><kbd>S</kbd> agachar</span>
+      <span><kbd>J</kbd> débil</span>
+      <span><kbd>K</kbd> fuerte</span>
+      <span><kbd>L</kbd> bloquear</span>
+      <span><kbd>H</kbd> hitboxes</span>
+      <span><kbd>Enter</kbd> confirmar</span>
     </section>
 
-    <p id="status" class="status" aria-live="polite">
-      Cargando recursos…
-    </p>
+    <p id="status" class="status" aria-live="polite">Cargando…</p>
   </main>
 
   <script type="module" src="src/game.js"></script>

@@ -1,80 +1,93 @@
-# La Cofradía Fight Night — v0.2.1
+# La Cofradía Battle — v0.3
 
-Versión enfocada en **dejar los sprites funcionales y ordenados** para seguir
-construyendo el juego encima sin rehacer toda la base.
+Versión web lista para GitHub Pages.
 
-## Novedades de esta versión
+## Qué cambia en v0.3
 
-- Reorganización del código en **módulos**:
-  - `src/config.js`
-  - `src/assets.js`
-  - `src/fighter.js`
-  - `src/stage.js`
-  - `src/game.js`
-- Sprites corregidos / consolidados como base de trabajo.
-- Se agregan sprites de **victoria** para ambos personajes.
-- **Pantalla de carga** con barra de progreso.
-- **Pantalla de selección de personaje** antes de la pelea.
-- **Pantalla de victoria** posterior al K.O.
-- El personaje ganador pasa al estado de **victory animation**.
-- Flujo preparado para escalar:
-  - `loading -> select -> fight -> victory`
-
-## Estado actual del combate
-
-Implementado:
-
+- Reemplaza completamente los sprites viejos por los nuevos personajes generados:
+  - **The Biker**
+  - **The Cuy Man**
+- Cada frame está separado en un PNG independiente y usa el mismo canvas y baseline.
+- Pantalla de carga.
+- Selección de personaje.
+- Peleas al mejor de 3 rondas.
+- Temporizador de 60 segundos.
+- Presentación `ROUND` / `FIGHT!`.
 - Barra de vida.
-- Caminar.
-- Correr / dash.
-- Salto.
-- Agachar.
-- Golpe débil.
-- Golpe fuerte.
-- Golpe agachado.
-- Golpe aéreo.
+- Golpe débil y fuerte.
+- Agacharse + golpe agachado.
+- Salto + ataque aéreo.
 - Bloqueo.
-- Reacción al daño.
-- K.O.
+- Caminar y correr.
+- Hit reaction.
+- Knockdown/K.O.
+- Hit-stop básico al conectar un golpe.
+- Animación y pantalla de victoria.
 - CPU básica.
+- Visualizador de hitboxes con `H`.
 
 ## Controles
 
 | Acción | Tecla |
 |---|---|
-| Caminar | `A` / `D` |
-| Correr | `Shift` + dirección |
-| Correr alternativo | doble toque `A` o `D` |
-| Saltar | `W` |
-| Agachar | `S` |
-| Golpe débil | `J` |
-| Golpe fuerte | `K` |
-| Bloquear | `L` |
-| Confirmar en menús | `Enter` |
-| Hitboxes | `H` |
-| Reiniciar round | `R` |
+| Mover | A / D |
+| Correr | Shift + dirección |
+| Saltar | W |
+| Agacharse | S |
+| Golpe débil | J |
+| Golpe fuerte | K |
+| Bloquear | L |
+| Mostrar hitboxes | H |
+| Confirmar menú | Enter |
+| Reiniciar combate | R |
 
-## Cómo actualizar GitHub Pages
+## Estructura
 
-Como tu repo ya funciona en GitHub Pages, para actualizarlo basta con:
+```text
+assets/
+  characters/
+    biker/
+      idle/
+      walk/
+      run/
+      jump/
+      crouch/
+      weak/
+      strong/
+      crouch_attack/
+      air_attack/
+      block/
+      hit/
+      death/
+      victory/
+    cuy/
+      ...
+  manifest.json
+  preview/
+  source/
+src/
+  config.js
+  assets.js
+  fighter.js
+  stage.js
+  game.js
+index.html
+styles.css
+.nojekyll
+```
 
-1. Borrar o reemplazar en la raíz del repo:
-   - `assets/`
-   - `src/`
-   - `index.html`
-   - `styles.css`
-   - `README.md`
-2. Subir el contenido de esta versión **directamente a la raíz**.
-3. Hacer commit.
-4. Esperar el nuevo deploy verde en **Actions**.
+La carpeta `assets/source/` contiene las hojas maestras solamente como referencia.
+El juego usa exclusivamente los PNG individuales dentro de `assets/characters/`.
 
-## Próximos pasos recomendados
+## Subir a GitHub
 
-1. Afinar todavía más algunos recortes del spritesheet si hace falta.
-2. Reemplazar bloqueo por animaciones dedicadas.
-3. Crear sistema de rounds (best of 3).
-4. Añadir hit-stop.
-5. Añadir VFX/SFX.
-6. Especiales del humano y del cuy.
-7. Combo / cancel windows estilo Marvel vs Capcom.
+En tu repositorio actual reemplaza en la raíz:
 
+- `assets/`
+- `src/`
+- `index.html`
+- `styles.css`
+- `README.md`
+- `.nojekyll`
+
+Haz commit en `main`. GitHub Pages volverá a desplegar automáticamente.
